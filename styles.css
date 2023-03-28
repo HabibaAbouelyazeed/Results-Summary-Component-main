@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+  }
+
+body{
+    background-color: rgb(247, 242, 236);
+    font-family: 'Hanken Grotesk';
+}
+
+
+#card-holder{
+    padding: 0.5rem;
+    display: flex;
+}
+
+#result-section{
+    padding: 2rem;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+#summary-section{
+    padding: 5rem;
+    background-color: hsl(0, 0%, 100%);
+}
