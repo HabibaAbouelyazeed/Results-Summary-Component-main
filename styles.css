@@ -3,23 +3,202 @@
     src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
   }
 
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: rgb(247, 242, 236);
+    background-color: rgba(228, 226, 223, 0.692);
     font-family: 'Hanken Grotesk';
+    font-size: 18px;
+    background-image: url(assets/images/background.jpg);
 }
 
+#container{
+    width: 80vw;
+    min-width: fit-content;
+    padding: 10rem 5rem;
+    margin: auto;
+    margin-top: 5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 10px 5px 12px hsla(224, 30%, 27%, 0.068);
+}
 
 #card-holder{
-    padding: 0.5rem;
+    width: fit-content;
+    height: 50vh;
     display: flex;
-}
-
-#result-section{
-    padding: 2rem;
-    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
-}
-
-#summary-section{
-    padding: 5rem;
+    border-radius: 5%;
+    margin: auto;
     background-color: hsl(0, 0%, 100%);
+    box-shadow: 10px 10px 5px 12px hsla(222, 100%, 96%, 0.568);
+}
+
+
+/*Result score ==>START*/
+#result-section{
+    width: 11rem;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    border-radius: 5%;
+}
+
+
+#result-section p {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+#result-tag{
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+#result-circle{
+    width: 6rem;
+    height: 6rem;
+    padding: 2rem;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+}
+
+#result-circle :first-child {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+#result-circle :last-child {
+    font-size: small;
+    opacity: 0.5;
+}
+
+#result-message :first-child{
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#result-message :last-child{
+    font-size: small;
+    opacity: 0.9;
+}
+/*Result score ==>END*/
+
+
+/*Summary score ==>START*/
+#summary-section{
+    width: 16rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: bold;
+    /*background-color: hsl(0, 0%, 100%);*/
+}
+
+#scores-summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.score-holder{
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.25rem;
+}
+
+.score-holder img{
+    margin-right: 0.5rem;
+}
+
+.score-holder > div{
+    display: flex;
+    flex-grow: 1
+}
+
+.score-holder:nth-of-type(1) .score-tag{
+    color: hsl(0, 100%, 67%);
+}
+.score-holder:nth-of-type(2) .score-tag{
+    color: hsl(39, 100%, 56%);
+}
+.score-holder:nth-of-type(3) .score-tag{
+    color: hsl(166, 100%, 37%);
+}
+.score-holder:nth-of-type(4) .score-tag{
+    color: hsl(234, 85%, 45%);
+}
+
+
+.score-holder:nth-of-type(1){
+    background-color: hsla(0, 100%, 67%, 0.10);
+}
+.score-holder:nth-of-type(2){
+    background-color: hsl(39, 100%, 56%, 0.10);
+}
+.score-holder:nth-of-type(3){
+    background-color: hsl(166, 100%, 37%, 0.10);
+}
+.score-holder:nth-of-type(4){
+    background-color: hsl(234, 85%, 45%, 0.10);
+}
+
+.score{
+    display: flex;
+    margin-left: auto;
+}
+
+.score :first-child{
+    padding-right: 0.5rem;
+}
+
+.score :last-child{
+    opacity: 0.5;
+}
+
+
+#summary-section button{
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+#summary-section button:hover{
+    cursor: pointer;
+}
+
+/*Summary score ==>END*/
+
+
+/* Mobile view*/
+@media only screen and (max-width: 375px) {
+    #container{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #card-holder{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #result-section{
+        width: fit-content;
+    }
+
+    #summary-section{
+        flex-grow: 1;
+        width: 85vw;
+    }
+
+    .attribution{
+        display: none;
+    }
 }
