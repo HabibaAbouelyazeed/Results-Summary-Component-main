@@ -25,6 +25,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./assets/Screenshots/desktop-preview.PNG)
+![](./assets/Screenshots/mobile-preview.PNG)
 
 ### Links
 
